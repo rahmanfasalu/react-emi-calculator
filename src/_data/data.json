@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "type": "Home loan",
+    "intrest": 3.5
+  },
+  {
+    "id": 2,
+    "type": "instance car loan",
+    "intrest": 2.8
+  },
+  {
+    "id": 3,
+    "type": "personal  loan",
+    "intrest": 5.3
+  }
+]

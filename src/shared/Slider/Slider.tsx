@@ -24,20 +24,19 @@ function Slider({
   const handleOnChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setValue(+e.target.value);
 
-  // Text input change
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const dValue = +e.target.value.replace(/\D/, "");
-    if (dValue > max) {
-      setValue(max);
-    } else if (dValue < min) {
-      setValue(min);
-    } else {
-      setValue(dValue);
-    }
+    setValue(dValue);
   };
 
   useEffect(() => {
-    onChangeCallback(value);
+    if (value > max) {
+      onChangeCallback(max);
+    } else if (value < min) {
+      onChangeCallback(min);
+    } else {
+      onChangeCallback(value);
+    }
   }, [value]);
 
   useEffect(() => {
